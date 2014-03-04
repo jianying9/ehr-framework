@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id: mybatis.cfg.xml 2617 2011-01-24 12:14:05Z 100529 $ -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="UNPOOLED">
+            	<property name="driver" value="org.gjt.mm.mysql.Driver"/>
+            	<property name="url" value="jdbc:mysql://192.168.18.163/test"/>
+            	<property name="username" value="test"/>
+            	<property name="password" value="test"/>
+                <!--<property name="data_source" value="jdbc/MySqlResource"/>  -->
+            </dataSource>
+        </environment>
+    </environments>
+</configuration>
